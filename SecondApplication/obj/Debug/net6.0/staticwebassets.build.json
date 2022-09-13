@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "HTAg/gjMil5yIt7LRAaKHPM+04CEgj8RLP2BJNTCTfQ=",
+  "Source": "SecondApplication",
+  "BasePath": "_content/SecondApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
