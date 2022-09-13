@@ -25,3 +25,6 @@ D:\infocommunication-technologies\SecondApplication\obj\Debug\net6.0\refint\Seco
 D:\infocommunication-technologies\SecondApplication\obj\Debug\net6.0\SecondApplication.pdb
 D:\infocommunication-technologies\SecondApplication\obj\Debug\net6.0\SecondApplication.genruntimeconfig.cache
 D:\infocommunication-technologies\SecondApplication\obj\Debug\net6.0\ref\SecondApplication.dll
+D:\infocommunication-technologies\SecondApplication\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+D:\infocommunication-technologies\SecondApplication\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\infocommunication-technologies\SecondApplication\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SecondApplication.Domains;
 using SecondApplication.Repository;
+using System.Net;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace HumanInfoApplication.Controllers
@@ -9,6 +10,11 @@ namespace HumanInfoApplication.Controllers
     [ApiController]
     public class HumanController : ControllerBase
     {
+        string address = "https://localhost:7149";
+
+        HttpWebRequest req = WebRequest.CreateHttp(address);
+        HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
+
         // GET: api/<HumanController>
         [HttpGet]
         public IEnumerable<string> Get()
