@@ -11,7 +11,7 @@ namespace WebApplication.repository
 {
     public class Storages
     {
-        public static Storage<Human> HumanStorage { get; } = new();
+        public static HumanStorage HumanStorage { get; } = new HumanStorage();
     }
 }
 
