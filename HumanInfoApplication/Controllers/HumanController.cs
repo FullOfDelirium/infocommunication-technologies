@@ -11,10 +11,10 @@ namespace HumanInfoApplication.Controllers
     [ApiController]
     public class HumanController : ControllerBase
     {
-        string address = "https://localhost:7215";
+        //string address = "https://localhost:7215";
 
-        HttpWebRequest req = WebRequest.CreateHttp(address);
-        HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
+        //HttpWebRequest req = WebRequest.CreateHttp(address);
+        //HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
         // GET: api/<HumanController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -26,7 +26,7 @@ namespace HumanInfoApplication.Controllers
         [HttpGet("{id}")]
         public Human Read(int ID)
         {
-            return Storages.HumanStorage.Read(ID);
+             return Storages.HumanStorage.Read(ID);
         }
 
         // POST api/<HumanController>

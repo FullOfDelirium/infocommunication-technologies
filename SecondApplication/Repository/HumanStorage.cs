@@ -8,7 +8,7 @@ namespace SecondApplication.Repository
 
         public void Create(Human human)
         {
-            Humans.Add(human.ID, human);
+            Humans.Add(human.HumanID, human);
         }
 
         public Human Read(int ID)

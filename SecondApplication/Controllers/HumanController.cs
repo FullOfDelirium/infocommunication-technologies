@@ -2,6 +2,7 @@
 using SecondApplication.Domains;
 using SecondApplication.Repository;
 using System.Net;
+using System.Text.Json;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace HumanInfoApplication.Controllers
@@ -10,41 +11,16 @@ namespace HumanInfoApplication.Controllers
     [ApiController]
     public class HumanController : ControllerBase
     {
-        string address = "https://localhost:7149";
-
-        HttpWebRequest req = WebRequest.CreateHttp(address);
-        HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
-
-        // GET: api/<HumanController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<Human> GetHumans(int id)
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<HumanController>/5
-        [HttpGet("{id}")]
-        public Human Read(int ID)
-        {
-            return Storages.HumanStorage.Read(ID);
-        }
-
-        // POST api/<HumanController>
-        [HttpPost]
-        public void Create(Human human) => Storages.HumanStorage.Create(human);
-
-        // PUT api/<HumanController>/5
-        [HttpPut("{id}")]
-        public Human Update(int ID, Human human)
-        {
-            return Storages.HumanStorage.Update(ID, human);
-        }
-
-        // DELETE api/<HumanController>/5
-        [HttpDelete("{id}")]
-        public bool Delete(int ID)
-        {
-            return Storages.HumanStorage.Delete(ID);
+            var client = new HttpClient();
+            var responce = await client.GetAsync($"https://localhost:7215/api/Human?humanId={id}");
+            var serverData = await responce.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<Human>(serverData, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
         }
     }
 }
