@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2606fe03-eb5a-4b58-b066-3f0f35e137ec": {
+      "ProjectGuid": "2606fe03-eb5a-4b58-b066-3f0f35e137ec",
+      "DisplayName": "SecondApplication",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

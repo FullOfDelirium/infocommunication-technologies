@@ -11,6 +11,11 @@ namespace HumanInfoApplication.Controllers
     [ApiController]
     public class HumanController : ControllerBase
     {
+        //public HumanController(IConfiguration conf)
+        //{
+        //    var value =     conf.GetValue<string>("Logging:LogLevel:Default");
+        //}
+
         [HttpGet]
         public async Task<Human> GetHumans(int id)
         {

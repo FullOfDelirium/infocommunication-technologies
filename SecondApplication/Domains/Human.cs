@@ -15,5 +15,8 @@
             Surname = surname;
             BirthDate = birthDate;
         }
+
+        public Human()
+        {  }
     }
 }
