@@ -1,0 +1,20 @@
+version: '4.13.1'
+
+services:
+  HumanInfoApplication:
+    image: lab-humaninfoapplication
+    build:
+      context: ./HumanInfoApplication
+      dockerfile: ./Dockerfile
+    container_name: lab-humaninfoapplication
+    ports:
+      - 8080:8080
+  
+  SecondApplication:
+    image: lab-secondapplication
+    build:
+      context: ./SecondApplication
+      dockerfile: ./Dockerfile
+    container_name: lab-secondapplication
+    ports:
+      - 80:80
