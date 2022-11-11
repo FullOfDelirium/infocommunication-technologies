@@ -1,4 +1,4 @@
-version: '22.04.1'
+version: '1'
 
 services:
   HumanInfoApplication:
@@ -8,7 +8,7 @@ services:
       dockerfile: ./Dockerfile
     container_name: lab-humaninfoapplication
     ports:
-      - 8080:8080
+      - 8080:7215
   
   SecondApplication:
     image: lab-secondapplication
@@ -17,4 +17,4 @@ services:
       dockerfile: ./Dockerfile
     container_name: lab-secondapplication
     ports:
-      - 80:80
+      - 80:7149
