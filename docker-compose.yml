@@ -1,20 +1,23 @@
-version: '1'
+version: '3'
 
 services:
-  HumanInfoApplication:
-    image: lab-humaninfoapplication
+  humaninfoapplication:
     build:
       context: ./HumanInfoApplication
-      dockerfile: ./Dockerfile
-    container_name: lab-humaninfoapplication
+      args:
+        URL: "http://SecondApplication:7149"
     ports:
-      - 8080:7215
+      - 5001:7215
+    volumes:
+      - '/HumanInfoApplication/app'
+    networks:
+      - common
   
-  SecondApplication:
-    image: lab-secondapplication
-    build:
-      context: ./SecondApplication
-      dockerfile: ./Dockerfile
-    container_name: lab-secondapplication
-    ports:
-      - 80:7149
+  secondapplication:
+    build: ./SecondApplication
+    volumes:
+      - '/SecondApplication/app'
+    networks:
+      - common
+networks:
+  common:
