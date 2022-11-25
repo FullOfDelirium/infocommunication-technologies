@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 7215
+EXPOSE 80
 
 ARG URL
 ENV URL=${URL}
