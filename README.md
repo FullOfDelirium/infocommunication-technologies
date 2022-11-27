@@ -1,2 +1,2 @@
-# infocommunication technologies
+# Инфокоммуникационные технологии
  
